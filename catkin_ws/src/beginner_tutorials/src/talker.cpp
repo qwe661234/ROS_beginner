@@ -28,6 +28,7 @@ int main(int argc, char **argv){
         ss << "hello world " << count;
         msg.data = ss.str();
 
+        // like printf
         ROS_INFO("%s", msg.data.c_str());
 
         chatter_pub.publish(msg);
