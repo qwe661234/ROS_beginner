@@ -1,16 +1,19 @@
 #include "ros/ros.h"
-#include "std_msgs/String.h"
+#include "beginner_tutorials/my_msg.h"
 
 /* subscriber 的回呼函式，參數為所接收的 message 的常數指標
    const pkg_name::msg_name::ConstPtr& msg
    之後使用 msg->field_name 即可存取 message 的欄位資料
 */
-void chatterCallback(const std_msgs::String::ConstPtr& msg){
-    ROS_INFO("I heard: [%s]", msg->data.c_str()); //.c_str() 將String物件轉換成C語言形式的字串常數
+void chatterCallback(const beginner_tutorials::my_msg::ConstPtr& msg){
+    ROS_INFO("I heard: [%ld]\n", msg->id);
+    ROS_INFO("I heard: [%s]\n", msg->title.c_str());
+    ROS_INFO("I heard: [%s]\n", msg->content.c_str());
+
 }
 
 int main(int argc, char **argv){
-    ros::init(argc, argv, "listener");
+    ros::init(argc, argv, "listenerwithCustomizedMsg");
     ros::NodeHandle n;
     /*  
         subscribe() 會將建立 topic 的資訊告訴 master node，回傳一個S ubscriber物件
