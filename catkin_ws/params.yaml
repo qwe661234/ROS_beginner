@@ -1,0 +1,11 @@
+aaa: 10
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_qwe661234_p65_creator_8rd__40181: http://qwe661234-P65-Creator-8RD:40181/
+rosversion: '1.15.13
+
+  '
+run_id: d46ab3da-621e-11ec-9f3b-0ddcb3f2ab1a

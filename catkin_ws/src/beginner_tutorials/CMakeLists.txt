@@ -151,6 +151,8 @@ add_executable(find_by_id_server src/find_by_id_server)
 target_link_libraries(find_by_id_server ${catkin_LIBRARIES})
 add_executable(find_by_id_client src/find_by_id_client)
 target_link_libraries(find_by_id_client ${catkin_LIBRARIES})
+add_executable(hello src/hello)
+target_link_libraries(hello ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

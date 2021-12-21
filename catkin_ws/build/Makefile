@@ -740,6 +740,19 @@ rospy_tutorials_generate_messages_lisp/fast:
 .PHONY : rospy_tutorials_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named hello
+
+# Build rule for target.
+hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	$(MAKE) -f beginner_tutorials/CMakeFiles/hello.dir/build.make beginner_tutorials/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+#=============================================================================
 # Target rules for targets named rospy_tutorials_generate_messages_py
 
 # Build rule for target.
@@ -874,6 +887,7 @@ help:
 	@echo "... add_two_ints_client"
 	@echo "... beginner_tutorials_generate_messages_lisp"
 	@echo "... rospy_tutorials_generate_messages_lisp"
+	@echo "... hello"
 	@echo "... rospy_tutorials_generate_messages_py"
 	@echo "... rospy_tutorials_generate_messages_cpp"
 	@echo "... _beginner_tutorials_generate_messages_check_deps_my_msg"

@@ -693,6 +693,21 @@ rospy_tutorials_generate_messages_lisp/fast:
 .PHONY : rospy_tutorials_generate_messages_lisp/fast
 
 # Convenience name for target.
+beginner_tutorials/CMakeFiles/hello.dir/rule:
+	cd /home/qwe661234/ROS_beginner/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/hello.dir/rule
+.PHONY : beginner_tutorials/CMakeFiles/hello.dir/rule
+
+# Convenience name for target.
+hello: beginner_tutorials/CMakeFiles/hello.dir/rule
+
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	cd /home/qwe661234/ROS_beginner/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/hello.dir/build.make beginner_tutorials/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+# Convenience name for target.
 beginner_tutorials/CMakeFiles/rospy_tutorials_generate_messages_py.dir/rule:
 	cd /home/qwe661234/ROS_beginner/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 beginner_tutorials/CMakeFiles/rospy_tutorials_generate_messages_py.dir/rule
 .PHONY : beginner_tutorials/CMakeFiles/rospy_tutorials_generate_messages_py.dir/rule
@@ -890,6 +905,33 @@ src/find_by_id_server.cpp.s:
 	cd /home/qwe661234/ROS_beginner/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/find_by_id_server.dir/build.make beginner_tutorials/CMakeFiles/find_by_id_server.dir/src/find_by_id_server.cpp.s
 .PHONY : src/find_by_id_server.cpp.s
 
+src/hello.o: src/hello.cpp.o
+
+.PHONY : src/hello.o
+
+# target to build an object file
+src/hello.cpp.o:
+	cd /home/qwe661234/ROS_beginner/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/hello.dir/build.make beginner_tutorials/CMakeFiles/hello.dir/src/hello.cpp.o
+.PHONY : src/hello.cpp.o
+
+src/hello.i: src/hello.cpp.i
+
+.PHONY : src/hello.i
+
+# target to preprocess a source file
+src/hello.cpp.i:
+	cd /home/qwe661234/ROS_beginner/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/hello.dir/build.make beginner_tutorials/CMakeFiles/hello.dir/src/hello.cpp.i
+.PHONY : src/hello.cpp.i
+
+src/hello.s: src/hello.cpp.s
+
+.PHONY : src/hello.s
+
+# target to generate assembly for a file
+src/hello.cpp.s:
+	cd /home/qwe661234/ROS_beginner/catkin_ws/build && $(MAKE) -f beginner_tutorials/CMakeFiles/hello.dir/build.make beginner_tutorials/CMakeFiles/hello.dir/src/hello.cpp.s
+.PHONY : src/hello.cpp.s
+
 src/listener.o: src/listener.cpp.o
 
 .PHONY : src/listener.o
@@ -1046,6 +1088,7 @@ help:
 	@echo "... add_two_ints_client"
 	@echo "... beginner_tutorials_generate_messages_lisp"
 	@echo "... rospy_tutorials_generate_messages_lisp"
+	@echo "... hello"
 	@echo "... rospy_tutorials_generate_messages_py"
 	@echo "... rospy_tutorials_generate_messages_cpp"
 	@echo "... _beginner_tutorials_generate_messages_check_deps_my_msg"
@@ -1064,6 +1107,9 @@ help:
 	@echo "... src/find_by_id_server.o"
 	@echo "... src/find_by_id_server.i"
 	@echo "... src/find_by_id_server.s"
+	@echo "... src/hello.o"
+	@echo "... src/hello.i"
+	@echo "... src/hello.s"
 	@echo "... src/listener.o"
 	@echo "... src/listener.i"
 	@echo "... src/listener.s"
